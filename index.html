@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sail Simple Calculator</title>
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <div class="container">
       <div class="calculator">
         <form>
           <div class="display">
-            <input type="text" name="display" />
+            <input type="text" name="display" placeholder="0" />
           </div>
           <div>
             <input
@@ -22,7 +23,7 @@
             <input
               type="button"
               value="DE"
-              onclick="display.value = 'display.value.toString().slice(0,-1)' "
+              onclick=" display.value=display.value.toString().slice(0,-1)"
             />
             <input type="button" value="." onclick="display.value += '.' " />
             <input type="button" value="/" onclick="display.value += '/' " />
@@ -49,6 +50,7 @@
             <input type="button" value="00" onclick="display.value += '00' " />
             <input type="button" value="0" onclick="display.value += '0' " />
             <input
+              class="equal"
               type="button"
               value="="
               onclick="display.value =eval(display.value) "
@@ -57,5 +59,10 @@
         </form>
       </div>
     </div>
+    <script>
+      function add() {
+        console.log("addition");
+      }
+    </script>
   </body>
 </html>
